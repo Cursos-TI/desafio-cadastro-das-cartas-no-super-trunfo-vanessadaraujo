@@ -1,17 +1,18 @@
 #include <stdio.h>
 
 int main() {
+//Início do código utilizando informações do nível novato. 
 
  //Nome do jogo com dois espaços para melhor visualização.   
     printf("SuperTrunfo países \n \n");
     
- //Variáveis a serem trabalhadas
+ //Definição de variáveis a serem trabalhadas
 
     int populacao, pontosturisticos;
     char pais[50], estado[50], cidade[50], codigo[50];
     float area, pib;
 
-//Início do cadastro das cartas
+//Início do cadastro das cartas com a interação do usuário no terminal
 
     printf("Vamos cadastrar o país! \n");    
     printf("Insira o nome do país: \n");
@@ -48,6 +49,21 @@ int main() {
     printf("A área territorial dessa cidade é de %f\n",area);
     printf("O PIB dessa cidade é %f\n",pib);
     printf("Essa cidade tem %d pontos turísticos.\n", pontosturisticos);
+
+/*Utilização dos conhecimentos do nível Aventureiro. Novas Propriedades Calculadas:
+Densidade Populacional: População dividida pela área da cidade.
+PIB per Capita: PIB total dividido pela população.*/
+
+    float densidadepopulacional;
+    float pibpercapita;
+
+    printf("\n Veja informações da cidade escolhida com base nas informaçãoes preenchidas: \n ");
+    
+    densidadepopulacional = populacao/area;
+    printf("A densidade populacional é de: %f\n", densidadepopulacional);
+    
+    pibpercapita = pib/populacao;
+    printf("O PIB per capita é de: \n %.2f", pibpercapita);
 
     return 0;
 }
