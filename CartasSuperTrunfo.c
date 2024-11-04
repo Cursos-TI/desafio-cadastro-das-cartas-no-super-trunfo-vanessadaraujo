@@ -26,7 +26,7 @@ int main() {
     printf("Informe o nome da cidade: \n");
     scanf ("%s", &cidade);
     
-    printf("Cadastre um código para sua carta: \n");
+    printf("Cadastre um código para sua carta: (Lembre-se, os códigos devem ter 3 caracteres, uma letra de A a H (representando um estado), e números de 01 a 04 (representando os municípios)\n");
     scanf("%s", &codigo);
 
     printf("Informe a população dessa cidade: \n");
@@ -43,11 +43,11 @@ int main() {
 
 //Agora, a forma como esses dados serão apresentados:
 
-    printf("País: %s - Estado: %s - Cidade: %s\n", pais, estado, cidade);
-    printf("Código da carta %s\n", codigo);
+    printf("\nPaís: %s - Estado: %s - Cidade: %s\n", pais, estado, cidade);
+    printf("Código da carta: %s\n", codigo);
     printf("A população dessa cidade é de %d\n",populacao);
-    printf("A área territorial dessa cidade é de %f\n",area);
-    printf("O PIB dessa cidade é %f\n",pib);
+    printf("A área territorial dessa cidade é de %.2f\n",area);
+    printf("O PIB dessa cidade é %.2f\n",pib);
     printf("Essa cidade tem %d pontos turísticos.\n", pontosturisticos);
 
 /*Utilização dos conhecimentos do nível Aventureiro. Novas Propriedades Calculadas:
@@ -57,13 +57,13 @@ PIB per Capita: PIB total dividido pela população.*/
     float densidadepopulacional;
     float pibpercapita;
 
-    printf("\n Veja informações da cidade escolhida com base nas informaçãoes preenchidas: \n ");
+    printf("\nVeja informações da cidade escolhida com base nas informaçãoes preenchidas: \n");
     
-    densidadepopulacional = populacao/area;
-    printf("A densidade populacional é de: %f\n", densidadepopulacional);
+    densidadepopulacional = (float)populacao/area;
+    printf("\nA densidade populacional é de: %.2f\n", densidadepopulacional);
     
-    pibpercapita = pib/populacao;
-    printf("O PIB per capita é de: \n %.2f", pibpercapita);
+    pibpercapita = pib/(float)populacao;
+    printf("O PIB per capita é de: %.2f\n", pibpercapita);
 
     return 0;
 }
